@@ -1,0 +1,53 @@
+mat-toolbar {
+  background: #004a9f;
+  color: white;
+}
+
+mat-sidenav {
+  width: 100px;
+  border-right: none;
+  background: #ffffff;
+  color: #08294E;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.content {
+  color: lightgray;
+  height: 100vh;
+  background-color: #ccc;
+}
+
+mat-sidenav-container {
+  height: 100vh;
+}
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+  padding: 3px;
+}
+mat-icon{
+  margin-right:8px;
+  margin-left: 10px;
+}
+
+.active{
+  background-color: #08294E!important;
+  color: #ffffff;
+}
+
+.head-main{
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 1rem!important;
+}
+
+.divider-1{
+  color: #fff;
+  margin-top: 10px!important;
+}
+
+
