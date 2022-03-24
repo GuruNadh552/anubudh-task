@@ -1,13 +1,28 @@
 <mat-sidenav-container>
   <mat-sidenav class="mat-elevation-z8" opened mode="side">
-    <div class="head-main shadow p-3">
-      AMD
+    <div class="head-main shadow p-3">AMD</div>
+
+    <div class="sidebar">
+      <div class="sidenav-link" *ngFor="let i of sideNavlinks;let j=index;" [routerLink]="i.iconUrl" routerLinkActive="active">
+        <div class="img-icon">
+          <mat-icon>{{ i.iconName }}</mat-icon>
+        </div>
+        <div class="text">
+          {{ i.iconText }}
+        </div>
+      </div>
     </div>
-
-</mat-sidenav>
-<mat-sidenav-content>
-  <div class="content mat-elevation-z8">
-
-  </div>
-</mat-sidenav-content>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <div class="header-nav p-1 shadow-sm">
+        <div class="header-icons p-2">
+          <mat-icon>search</mat-icon>
+          <mat-icon>notifications_active</mat-icon>
+          <mat-icon>list</mat-icon>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+      </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>

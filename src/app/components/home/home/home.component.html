@@ -1,1 +1,88 @@
-<p>home works!</p>
+<div class="container-fluid">
+  <div class="row p-3">
+    <div class="col m-1" *ngFor="let i of chartOptions;">
+      <div class="card">
+        <div class="card-body">
+          <highcharts-chart
+            [Highcharts]="Highcharts"
+            [options]="i"
+            style="width: 350px; height: 230px;display: block;text-align: center;"
+          ></highcharts-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row p-3">
+    <div class="col m-1">
+      <div class="card">
+        <div class="card-title p-3 ">
+          Server Control Panel
+        </div>
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioBtn" checked>
+            <label class="form-check-label" for="radioBtn1">
+              Production Server
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioBtn">
+            <label class="form-check-label" for="radioBtn2">
+              Staging Server
+            </label>
+          </div>
+          <button mat-flat-button color="accent">Add Server</button>
+        </div>
+      </div>
+    </div>
+    <div class="col m-1">
+      <div class="card">
+        <div class="card-title text-center mt-2">
+          Usuage Stats
+        </div>
+        <div class="card-body d-flex justify-content-center">
+          <highcharts-chart
+            [Highcharts]="Highcharts"
+            [options]="doubleChart"
+            style="width: 200px; height: 230px;display: block;text-align: center;"
+          ></highcharts-chart>
+          <highcharts-chart
+            [Highcharts]="Highcharts"
+            [options]="doubleChart"
+
+            style="width: 200px; height: 230px;display: block;text-align: center;"
+          ></highcharts-chart>
+        </div>
+      </div>
+    </div>
+    <div class="col m-1">
+      <div class="card">
+        <div class="card-title">
+          <form class="form-aut p-3">
+            <mat-form-field class="form-auto" appearance="fill">
+              <mat-label>Select Country</mat-label>
+              <input type="text"
+                     placeholder="Pick one"
+                     aria-label="Number"
+                     matInput
+                     [formControl]="myControl"
+                     [matAutocomplete]="auto">
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </form>
+          <div class="h6 mx-3">
+            Selected Country : N/A
+          </div>
+          <div class="h6 mx-3">
+            Country Code : N/A
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

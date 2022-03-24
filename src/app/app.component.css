@@ -13,7 +13,7 @@ mat-sidenav {
 }
 
 .content {
-  color: lightgray;
+  color: rgb(82, 78, 78);
   height: 100vh;
   background-color: #ccc;
 }
@@ -35,8 +35,7 @@ mat-icon{
 }
 
 .active{
-  background-color: #08294E!important;
-  color: #ffffff;
+  color: #991c1c;
 }
 
 .head-main{
@@ -45,9 +44,25 @@ mat-icon{
   font-size: 1rem!important;
 }
 
-.divider-1{
-  color: #fff;
-  margin-top: 10px!important;
+.sidebar{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 89vh;
+  color: rgb(82, 78, 78);
+}
+
+.header-nav{
+  background-color: rgb(82, 78, 78);
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.header-icons{
+  float: right;
 }
 
 
+.sidenav-link{
+  cursor: pointer;
+}
